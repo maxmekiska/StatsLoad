@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdbool.h>
 #include "utils.h"
-#include "basicstats.h"
+#include "statsfuncs.h"
 
 double median(double num[], int size){
   double result;

@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include "utils.h"
-#include "basicstats.h"
+#include "statsfuncs.h"
 
 int main(void) {
   double test[] = {1.0, 9.0, 4.0, 5.0, 6.0, 9.0, 8.0, 1.5};
