@@ -9,6 +9,22 @@ void print(double array[], int size) {
   }
 }
 
+double factorial(double n){
+  double result = 1.0;
+  for(int i=n; i > 1 ; i--){
+    result *= i;
+  }
+  return result;
+}
+
+double gamma(double n){
+  double result;
+
+  result = factorial(n-1);
+
+  return result;
+}
+
 bool even(int number){
   if(number%2 == 0){
     return true;

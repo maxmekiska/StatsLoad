@@ -11,4 +11,7 @@ double std(double num[], int size, bool population);
 
 double gauss(double mu, double sigma, double x);
 
+double beta(double alpha, double beta, double x);
+
+
 #endif

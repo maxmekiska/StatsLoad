@@ -8,7 +8,7 @@ int main(void) {
   double test[] = {1.0, 9.0, 4.0, 5.0, 6.0, 9.0, 8.0, 1.5};
   double result;
 
-  result = median(test, 8);
+  result = beta(1.1, 2, 0.4);
   
   printf("%f", result);
   return 0;
