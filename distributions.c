@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdbool.h>
+#include "utils.h"
 #include "basicstats.h"
 
 double gauss(double mu, double sigma, double x){

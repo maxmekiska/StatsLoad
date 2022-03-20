@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
+#include "utils.h"
 #include "basicstats.h"
 
 double median(double num[], int size){
