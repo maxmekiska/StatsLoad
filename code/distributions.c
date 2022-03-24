@@ -19,20 +19,20 @@ double gauss(double mu, double sigma, double x){
 }
 
 double beta(double alpha, double beta, double x){
-  double term1;
-  double term2;
-  double term3;
-  double result;
+ 	double term1;
+ 	double term2;
+ 	double term3;
+ 	double result;
 
-  term1 = (gamma((alpha + beta))) / (gamma(alpha) * gamma(beta));
+  	term1 = (gamma((alpha + beta))) / (gamma(alpha) * gamma(beta));
 
-  term2 = pow((1 - x), (beta - 1));
+  	term2 = pow((1 - x), (beta - 1));
 
-  term3 = pow(x, (alpha - 1));
+  	term3 = pow(x, (alpha - 1));
 
-  result = term1 * term2 * term3;
+	result = term1 * term2 * term3;
 
-  return result;
+  	return result;
 }
 
 double exponential(double lambda, double x){
