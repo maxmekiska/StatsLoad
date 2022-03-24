@@ -4,44 +4,44 @@
 #include "statsfuncs.h"
 
 double gauss(double mu, double sigma, double x){
-	double prob;
-  	double term1;
-	double term2;
-	double sigma_sqrt;
+    double prob;
+    double term1;
+    double term2;
+    double sigma_sqrt;
 
-	sigma_sqrt = pow(sigma, 2);
+    sigma_sqrt = pow(sigma, 2);
 
-	term1 = pow((2 * M_PI * sigma_sqrt), -0.5);
-	term2 = exp(-(pow(x-mu, 2)) / 2 * sigma_sqrt);
+    term1 = pow((2 * M_PI * sigma_sqrt), -0.5);
+    term2 = exp(-(pow(x-mu, 2)) / 2 * sigma_sqrt);
 
-	prob = term1 * term2;
-	return prob;
+    prob = term1 * term2;
+    return prob;
 }
 
 double beta(double alpha, double beta, double x){
- 	double term1;
- 	double term2;
- 	double term3;
- 	double result;
+    double term1;
+    double term2;
+    double term3;
+    double result;
 
-  	term1 = (gamma((alpha + beta))) / (gamma(alpha) * gamma(beta));
+    term1 = (gamma((alpha + beta))) / (gamma(alpha) * gamma(beta));
 
-  	term2 = pow((1 - x), (beta - 1));
+    term2 = pow((1 - x), (beta - 1));
 
-  	term3 = pow(x, (alpha - 1));
+    term3 = pow(x, (alpha - 1));
 
-	result = term1 * term2 * term3;
+    result = term1 * term2 * term3;
 
-  	return result;
+    return result;
 }
 
 double exponential(double lambda, double x){
-	double term1;
-	double result;
+    double term1;
+    double result;
 
-	term1 = -(lambda * x);
+    term1 = -(lambda * x);
 
-	result = exp(term1);
+    result = exp(term1);
 
-	return result;
+    return result;
 }
