@@ -40,10 +40,8 @@ void swap(double *a, double *b) {
   *b = t;
 }
 
-int partition(double array[], int low, int high) {
-  
-  int pivot = array[high];
-  
+int partition(double array[], int low, int high) {  
+  int pivot = array[high]; 
   int i = (low - 1);
 
   for (int j = low; j < high; j++) {
