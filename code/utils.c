@@ -5,7 +5,7 @@
 
 void print(double array[], int size) {
   for (int i = 0; i < size; ++i) {
-    printf("%f", array[i]);
+    printf("%.15f\n", array[i]);
   }
 }
 
