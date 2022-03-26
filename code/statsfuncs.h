@@ -1,6 +1,12 @@
 #ifndef BASICSTATS_HEADER
 #define BASICSTATS_HEADER
 
+struct dist {
+    double probability;
+    double mean;
+    double variance;
+};
+
 double median(double num[], int size);
 
 double mean(double num[], int size);
