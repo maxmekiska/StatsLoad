@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
-#include "utils.h"
 
 void print(double array[], int size) {
   for (int i = 0; i < size; ++i) {

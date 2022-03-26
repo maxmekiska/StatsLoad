@@ -1,6 +1,5 @@
 #include <math.h>
 #include <stdbool.h>
-#include "utils.h"
 #include "statsfuncs.h"
 
 struct dist gauss(double mu, double sigma, double x){
@@ -36,7 +35,6 @@ struct dist beta(double alpha, double beta, double x){
     result.probability = term1 * term2 * term3;
     result.mean = alpha / (alpha + beta);
     result.variance = (alpha * beta) / ((pow((alpha + beta), 2)) * (alpha + beta + 1));
-
 
     return result;
 }
