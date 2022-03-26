@@ -35,13 +35,16 @@ double beta(double alpha, double beta, double x){
     return result;
 }
 
-double exponential(double lambda, double x){
+struct dist exponential(double lambda, double x){
     double term1;
-    double result;
+    struct dist result;
 
     term1 = -(lambda * x);
 
-    result = exp(term1);
+    result.probability = exp(term1);
+    result.mean = lambda;
+    result.variance = pow(lambda, 2);
+
 
     return result;
 }

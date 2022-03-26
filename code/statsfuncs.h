@@ -19,6 +19,6 @@ double gauss(double mu, double sigma, double x);
 
 double beta(double alpha, double beta, double x);
 
-double exponential(double lambda, double x);
+struct dist exponential(double lambda, double x);
 
 #endif
