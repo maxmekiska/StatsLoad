@@ -15,7 +15,7 @@ double variance(double num[], int size, bool population);
 
 double std(double num[], int size, bool population);
 
-double gauss(double mu, double sigma, double x);
+struct dist gauss(double mu, double sigma, double x);
 
 struct dist beta(double alpha, double beta, double x);
 
