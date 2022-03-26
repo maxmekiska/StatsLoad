@@ -18,11 +18,11 @@ double gauss(double mu, double sigma, double x){
     return prob;
 }
 
-double beta(double alpha, double beta, double x){
+struct dist beta(double alpha, double beta, double x){
     double term1;
     double term2;
     double term3;
-    double result;
+    struct dist result;
 
     term1 = (gamma((alpha + beta))) / (gamma(alpha) * gamma(beta));
 
@@ -30,7 +30,10 @@ double beta(double alpha, double beta, double x){
 
     term3 = pow(x, (alpha - 1));
 
-    result = term1 * term2 * term3;
+    result.probability = term1 * term2 * term3;
+    result.mean = alpha / (alpha + beta);
+    result.variance = (alpha * beta) / ((pow((alpha + beta), 2)) * (alpha + beta + 1));
+
 
     return result;
 }
