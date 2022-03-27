@@ -9,7 +9,7 @@
 int main(void) {
   double test[] = {1.0, 9.0, 4.0, 5.0, 6.0, 9.0, 8.0, 1.5};
   struct dist result, result3, result4, result6, result7;
-  double result2, result5;
+  double result2, result5, result8;
 	
   result = exponential(2.3, 1.2);
   result3 = beta(0.5, 0.4, 0.8);
@@ -18,6 +18,7 @@ int main(void) {
   result7 = poisson(10, 4);
   result2 = median(test, 8);
   result5 = mean(test, 8);
+  result8 = binoc(7, 3);
   
   
   printf("exp Probabilitiy: %f \n", result.probability);
@@ -42,6 +43,7 @@ int main(void) {
 
   printf("median: %f \n", result2);
   printf("mean: %f \n", result5);
+  printf("binomial coefficient: %f \n", result8);
 
   print(test, 8);
 

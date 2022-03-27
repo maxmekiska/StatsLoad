@@ -17,6 +17,17 @@ double factorial(double n){
   return result;
 }
 
+int binoc(int n, int k){
+    int n_minus_k;
+    int result;
+    
+    n_minus_k = n - k;
+
+    result = factorial(n) / (factorial(k) * factorial(n_minus_k));
+
+    return result;
+}
+
 double gamma(double n){
   double result;
 

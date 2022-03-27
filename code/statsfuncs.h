@@ -11,6 +11,8 @@ void print(double array[], int size);
 
 double factorial(double n);
 
+int binoc(int n, int k);
+
 double gamma(double n);
 
 bool even(int number);
