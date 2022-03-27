@@ -67,3 +67,19 @@ struct dist geometric(int trials, double success_prob){
 	
 	return result;
 }
+
+struct dist poisson(int x, double lambda){
+	double term1;
+	double term2;
+	double term3;
+	struct dist result;
+
+	term1 = 1 / (factorial(x));
+	term2 = pow(lambda, x);
+	term3 = exp(- lambda);
+
+	result.probability = term1 * term2 * term3;
+	result.mean = lambda;
+	result.variance = lambda;
+	return result;
+}

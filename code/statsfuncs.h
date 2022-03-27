@@ -37,4 +37,6 @@ struct dist exponential(double lambda, double x);
 
 struct dist geometric(int trials, double success_prob);
 
+struct dist poisson(int x, double lambda);
+
 #endif
