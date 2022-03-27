@@ -52,3 +52,18 @@ struct dist exponential(double lambda, double x){
 
     return result;
 }
+
+struct dist geometric(int trials, double success_prob){
+	double failure_prob;
+	int trial_adj;
+	struct dist result;	
+
+	failure_prob = 1 - success_prob;
+	trial_adj = trials - 1;
+
+	result.probability = success_prob * pow(failure_prob, trial_adj);
+	result.mean = 1 / success_prob;
+	result.variance = (1 - success_prob) / (pow(success_prob, 2));
+	
+	return result;
+}

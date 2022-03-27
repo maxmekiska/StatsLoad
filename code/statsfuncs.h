@@ -35,4 +35,6 @@ struct dist beta(double alpha, double beta, double x);
 
 struct dist exponential(double lambda, double x);
 
+struct dist geometric(int trials, double success_prob);
+
 #endif
