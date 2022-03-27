@@ -8,8 +8,11 @@
 
 int main(void) {
   double test[] = {1.0, 9.0, 4.0, 5.0, 6.0, 9.0, 8.0, 1.5};
+  double ar1[] = {2.1, 2.5, 3.6, 4};
+  double ar2[] = {8, 10, 12, 14};
+
   struct dist result, result3, result4, result6, result7;
-  double result2, result5, result8;
+  double result2, result5, result8, result9;
 	
   result = exponential(2.3, 1.2);
   result3 = beta(0.5, 0.4, 0.8);
@@ -19,6 +22,7 @@ int main(void) {
   result2 = median(test, 8);
   result5 = mean(test, 8);
   result8 = binoc(7, 3);
+  result9 = cov(ar1, ar2, 4);
   
   
   printf("exp Probabilitiy: %f \n", result.probability);
@@ -44,6 +48,7 @@ int main(void) {
   printf("median: %f \n", result2);
   printf("mean: %f \n", result5);
   printf("binomial coefficient: %f \n", result8);
+  printf("Covariance: %f \n", result9);
 
   print(test, 8);
 

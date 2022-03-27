@@ -31,6 +31,8 @@ double variance(double num[], int size, bool population);
 
 double std(double num[], int size, bool population);
 
+double cov(double ar1[], double ar2[], int n);
+
 struct dist gauss(double mu, double sigma, double x);
 
 struct dist beta(double alpha, double beta, double x);

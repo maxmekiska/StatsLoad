@@ -68,3 +68,21 @@ double std(double num[], int size, bool population){
   }
   return sqrt(result); 
 }
+
+double cov(double ar1[], double ar2[], int n){
+    double mult_sum;
+    double mean_ar1;
+    double mean_ar2;
+    double result;
+    
+    mean_ar1 = mean(ar1, n);
+    mean_ar2 = mean(ar2, n);
+
+    for(int i = 0;i < n; i++){
+        mult_sum += ar1[i] * ar2[i];
+    }
+    
+    result = mult_sum - (mean_ar1 * mean_ar2 * n);
+    result = result / (n - 1);
+    return result;
+}
