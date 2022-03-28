@@ -83,3 +83,22 @@ struct dist poisson(int x, double lambda){
 	result.variance = lambda;
 	return result;
 }
+
+struct dist chisquare(double v, double x){
+	double term1;
+	double term2;
+	double term3;
+	struct dist result;
+
+	term1 = (pow(2, (-v/2))) / gamma(v/2);
+	term2 = pow(x, ((v / 2) - 1));
+	term3 = exp((-v / 2));
+
+	result.probability = term1 * term2 * term3;
+	result.mean = v;
+	result.variance = 2 * v;
+
+	return result;
+}
+
+

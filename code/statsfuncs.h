@@ -43,4 +43,6 @@ struct dist geometric(int trials, double success_prob);
 
 struct dist poisson(int x, double lambda);
 
+struct dist chisquare(double v, double x);
+
 #endif

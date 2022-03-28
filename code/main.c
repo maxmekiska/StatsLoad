@@ -11,7 +11,7 @@ int main(void) {
   double ar1[] = {2.1, 2.5, 3.6, 4};
   double ar2[] = {8, 10, 12, 14};
 
-  struct dist result, result3, result4, result6, result7;
+  struct dist result, result3, result4, result6, result7, result10;
   double result2, result5, result8, result9;
 	
   result = exponential(2.3, 1.2);
@@ -19,6 +19,7 @@ int main(void) {
   result4 = gauss(0, 1, 2);
   result6 = geometric(10, 0.5);
   result7 = poisson(10, 4);
+  result10 = chisquare(2, 4);
   result2 = median(test, 8);
   result5 = mean(test, 8);
   result8 = binoc(7, 3);
@@ -44,6 +45,10 @@ int main(void) {
   printf("poisson Probabilitiy: %f \n", result7.probability);
   printf("poisson Mean: %f \n", result7.mean);
   printf("poisson Variance: %f \n", result7.variance);
+
+  printf("chi squared Probabilitiy: %f \n", result10.probability);
+  printf("chi squared Mean: %f \n", result10.mean);
+  printf("chi squared Variance: %f \n", result10.variance);
 
   printf("median: %f \n", result2);
   printf("mean: %f \n", result5);
