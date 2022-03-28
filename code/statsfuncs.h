@@ -45,4 +45,6 @@ struct dist poisson(int x, double lambda);
 
 struct dist chisquare(double v, double x);
 
+double gumbel(double x, double mu, double sigma, int v);
+
 #endif

@@ -101,4 +101,31 @@ struct dist chisquare(double v, double x){
 	return result;
 }
 
+double gumbel(double x, double mu, double sigma, int v){
+	double term1;
+	double term2;
+	double term3;
+	double term4;
+	double term5;
+	double term6;
+	double term7;
 
+	double result;
+
+	term1 = (x - mu) / sigma;
+	term2 = exp(term1);
+	term3 = exp(-term2); 
+
+	if(v == 0){
+		result = term3;
+	}
+	else{
+		term4 = (- 1 / v);
+		term5 = - (1 + v * term1); 
+		term6 = pow(term5, term4);
+		term7 = exp(term6);
+		result = term7;
+	}
+
+	return result;
+}
