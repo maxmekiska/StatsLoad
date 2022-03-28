@@ -129,3 +129,18 @@ double gumbel(double x, double mu, double sigma, int v){
 
 	return result;
 }
+
+struct dist hypergeo(double success_selection, double trial_size, double success_population, double population_size){
+	double term1;
+	double term2;
+	struct dist result;
+
+	term1 = binoc(success_population, success_selection) * binoc(population_size - success_population, trial_size - success_selection);
+
+	result.probability = term1 / (binoc(population_size, trial_size));
+	result.mean = (success_selection * success_population) / population_size;
+	term2 = (success_selection * success_population) * (population_size - success_population) * (population_size - trial_size);
+
+	result.variance = term2 / (pow(population_size, 2) * (population_size - 1));
+	return result;
+}

@@ -11,7 +11,7 @@ int main(void) {
   double ar1[] = {2.1, 2.5, 3.6, 4};
   double ar2[] = {8, 10, 12, 14};
 
-  struct dist result, result3, result4, result6, result7, result10;
+  struct dist result, result3, result4, result6, result7, result10, result13;
   double result2, result5, result8, result9, result11, result12;
 	
   result = exponential(2.3, 1.2);
@@ -22,6 +22,7 @@ int main(void) {
   result10 = chisquare(2, 4);
   result11 = gumbel(3, 2, 1, 0);
   result12 = gumbel(3, 2, 1, 1);
+  result13 = hypergeo(2, 3, 5, 30);
   result2 = median(test, 8);
   result5 = mean(test, 8);
   result8 = binoc(7, 3);
@@ -55,6 +56,9 @@ int main(void) {
   printf("gumbel v = 0: %f \n", result11);
   printf("gumbel v = 1: %f \n", result12);
 
+  printf("hypergeometric Probabilitiy: %.15f \n", result13.probability);
+  printf("hypergeometric Mean: %f \n", result13.mean);
+  printf("hypergeometric Variance: %f \n", result13.variance);
 
   printf("median: %f \n", result2);
   printf("mean: %f \n", result5);

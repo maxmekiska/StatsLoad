@@ -47,4 +47,5 @@ struct dist chisquare(double v, double x);
 
 double gumbel(double x, double mu, double sigma, int v);
 
+struct dist hypergeo(double success_selection, double trial_size, double success_population, double population_size);
 #endif
