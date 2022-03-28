@@ -135,7 +135,7 @@ struct dist hypergeo(double success_selection, double trial_size, double success
 	double term2;
 	struct dist result;
 
-	term1 = binoc(success_population, success_selection) * binoc(population_size - success_population, trial_size - success_selection);
+	term1 = binoc(success_population, success_selection) * binoc((population_size - success_population), (trial_size - success_selection));
 
 	result.probability = term1 / (binoc(population_size, trial_size));
 	result.mean = (success_selection * success_population) / population_size;
