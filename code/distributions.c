@@ -144,3 +144,19 @@ struct dist hypergeo(double success_selection, double trial_size, double success
 	result.variance = term2 / (pow(population_size, 2) * (population_size - 1));
 	return result;
 }
+
+struct dist lognormal(double x, double sigma, double mu){
+	double term1;
+	double term2;
+	double term3;
+	struct dist result;
+
+	term1 = x * sigma * sqrt(2 * M_PI);
+	term2 = exp(((- pow(log(x) - mu, 2)) / 2 * pow(sigma, 2)));
+	term3 = 1 / term1;
+
+	result.probability = term3 * term2;
+	result.mean = exp(mu + (0.5 * pow(sigma,2)));
+	result.variance = exp(2 * mu) * exp(pow(sigma, 2)) * (exp(pow(sigma, 2)) - 1);
+	return result;
+}
