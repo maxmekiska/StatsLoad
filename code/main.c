@@ -30,6 +30,7 @@ int main(void) {
   result9 = cov(ar1, ar2, 4);
   
   
+  printf("In the following Probabililty refers to Probability Density:\n");
   printf("exp Probabilitiy: %f \n", result.probability);
   printf("exp Mean: %f \n", result.mean);
   printf("exp Variance: %f \n", result.variance);
