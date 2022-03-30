@@ -28,7 +28,7 @@ int main(void) {
   result5 = mean(test, 8);
   result8 = binoc(7, 3);
   result15 = permutation(7, 3);
-  result9 = cov(ar1, ar2, 4);
+  result9 = cov(ar1, ar2, 4, true);
  
   
   printf("In the following Probabililty refers to Probability Density:\n");
@@ -71,7 +71,8 @@ int main(void) {
   printf("mean: %f \n", result5);
   printf("binomial coefficient: %f \n", result8);
   printf("permutation: %f \n", result15);
-  printf("Covariance sample: %f \n", result9);
+  printf("Covariance: %f \n", result9);
+
 
   print(test, 8);
 

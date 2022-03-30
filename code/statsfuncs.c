@@ -69,7 +69,7 @@ double std(double num[], int size, bool population){
   return sqrt(result); 
 }
 
-double cov(double ar1[], double ar2[], int n){
+double cov(double ar1[], double ar2[], int n, bool population){
     double mult_sum;
     double mean_ar1;
     double mean_ar2;
@@ -82,6 +82,11 @@ double cov(double ar1[], double ar2[], int n){
         mult_sum += ar1[i] * ar2[i];
     }
     result = mult_sum - (mean_ar1 * mean_ar2 * n);
-    result = result / (n - 1);
+    if(population == false){
+    	result = result / (n - 1);
+    }
+    else{
+	result = result / n;
+    }
     return result;  
 }
