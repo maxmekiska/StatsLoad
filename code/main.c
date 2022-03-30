@@ -12,7 +12,7 @@ int main(void) {
   double ar2[] = {8, 10, 12, 14};
 
   struct dist result, result3, result4, result6, result7, result10, result13, result14;
-  double result2, result5, result8, result9, result11, result12;
+  double result2, result5, result8, result9, result11, result12, result15;
 	
   result = exponential(2.3, 1.2);
   result3 = beta(0.5, 0.4, 0.8);
@@ -27,6 +27,7 @@ int main(void) {
   result2 = median(test, 8);
   result5 = mean(test, 8);
   result8 = binoc(7, 3);
+  result15 = permutation(7, 3);
   result9 = cov(ar1, ar2, 4);
   
   
@@ -69,6 +70,7 @@ int main(void) {
   printf("median: %f \n", result2);
   printf("mean: %f \n", result5);
   printf("binomial coefficient: %f \n", result8);
+  printf("permutation: %f \n", result15);
   printf("Covariance: %f \n", result9);
 
   print(test, 8);

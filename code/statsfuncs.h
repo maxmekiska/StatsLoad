@@ -13,6 +13,8 @@ double factorial(double n);
 
 int binoc(int n, int k);
 
+int permutation(int n, int k);
+
 double gamma(double n);
 
 bool even(int number);
