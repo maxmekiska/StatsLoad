@@ -81,8 +81,7 @@ double cov(double ar1[], double ar2[], int n){
     for(int i = 0;i < n; i++){
         mult_sum += ar1[i] * ar2[i];
     }
-    
     result = mult_sum - (mean_ar1 * mean_ar2 * n);
     result = result / (n - 1);
-    return result;
+    return result;  
 }
