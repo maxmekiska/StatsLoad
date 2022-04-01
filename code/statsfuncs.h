@@ -35,6 +35,8 @@ double std(double num[], int size, bool population);
 
 double cov(double ar1[], double ar2[], int n, bool population);
 
+double pcorr(double ar1[], double ar2[], int size);
+
 struct dist gauss(double mu, double sigma, double x);
 
 struct dist beta(double alpha, double beta, double x);

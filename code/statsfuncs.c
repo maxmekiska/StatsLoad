@@ -90,3 +90,25 @@ double cov(double ar1[], double ar2[], int n, bool population){
     }
     return result;  
 }
+
+double pcorr(double ar1[], double ar2[], int size){
+    double mult_sum;
+    double cube_mult_sum_left;
+    double cube_mult_sum_right;
+    
+    double mean_x=mean(ar1, size);
+    double mean_y=mean(ar2, size);
+    
+    double result;
+    
+    for(int i=0; i < size; i++){
+        mult_sum += (ar1[i] - mean_x) * (ar2[i] - mean_y);
+        
+        cube_mult_sum_left += pow((ar1[i] - mean_x), 2);
+        cube_mult_sum_right += pow((ar2[i] - mean_y), 2);
+    }
+    
+    result = mult_sum / sqrt(cube_mult_sum_left * cube_mult_sum_right);
+    
+    return result;
+}
